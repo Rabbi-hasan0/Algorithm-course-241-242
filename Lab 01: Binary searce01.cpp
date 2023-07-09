@@ -6,7 +6,7 @@
 #include<bits/stdc++.h>
 #define nn "\n"
 using namespace std;
-bool binarysearce(int a[],int n,int num)
+bool binarysearch(int a[],int n,int num)
 {
     int l=0,r=n-1;
     while(l<=r)
@@ -30,7 +30,7 @@ int main()
     sort(a,a+n);
     int num;
     cin>>num;
-    if(binarysearce(a,n,num))
+    if(binarysearch(a,n,num))
         cout<<"Find"<<nn;
     else
         cout<<"Not found"<<nn;
