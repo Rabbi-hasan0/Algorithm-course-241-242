@@ -4,32 +4,34 @@
 **     Dept. of CSE.
 ***/
 #include<bits/stdc++.h>
-#define nn "\n"
 using namespace std;
-void insertionSort(int a[], int n)
-{
-    int i,key,j;
-    for (i=1; i<n; i++)
-    {
-        key=a[i];
-        j=i-1;
-        while (j>=0 && a[j]<key)
-        {
-            a[j+1]=a[j];
-            j--;
-        }
-        a[j+1]=key;
-    }
-    for (i=0; i<n; i++)
-        cout<<a[i]<<' ';
-    cout<<nn;
-}
-int main()
-{
-    int n;
-    cin>>n;
+
+int main(){
+    int n; cin >> n;
     int a[n+1];
-    for(int i=0; i<n; i++)
-        cin>>a[i];
-    insertionSort(a,n);
+    for(int i = 0; i < n; i++){
+        cin >> a[i];
+    }
+
+    for (int i=1; i<n; i++){
+        int key = a[i];
+        int j = i-1;
+
+        while (j >= 0){    // Move big value index than small value index;
+            if(a[j] < key){
+                a[j+1] = a[j];
+                j--;
+            }
+            else{
+                break;
+            }
+        }
+
+        a[j+1] = key; // Founded value fix in his index;
+    }
+
+    for (int i=0; i<n; i++)
+        cout << a[i] << ' ';
+    cout << '\n';
+  return 0;
 }
