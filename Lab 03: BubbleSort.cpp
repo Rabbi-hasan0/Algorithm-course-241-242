@@ -28,3 +28,8 @@ int32_t main(){
     }cout << '\n';
 return 0;
 }
+
+/*
+Time Complexity: O(n^2);
+Space COmplexity: O(1);
+*/
